@@ -11,12 +11,11 @@ public class Menu extends Screen {
     private boolean fullbrightEnabled = false;
 
     public Menu() {
-        super(Text.literal("Menu"));
+        super(Text.literal("Knut Menu"));
     }
 
     @Override
     protected void init() {
-        // Кнопка для включения/выключения Fullbright
         ButtonWidget fullbrightButton = ButtonWidget.builder(
             Text.literal("Fullbright: OFF"),
             button -> {
@@ -35,7 +34,6 @@ public class Menu extends Screen {
         
         this.addDrawableChild(fullbrightButton);
         
-        // Кнопка закрытия
         ButtonWidget closeButton = ButtonWidget.builder(
             Text.literal("Close"),
             button -> this.close()
@@ -48,7 +46,7 @@ public class Menu extends Screen {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        this.renderBackground(context, mouseX, mouseY, delta);
+        this.renderBackground(context);
         context.drawCenteredTextWithShadow(
             this.textRenderer, 
             this.title, 
