@@ -1,0 +1,20 @@
+{
+  "id": "knutmod",
+  "version": "${version}",
+  "name": "Knut Mod",
+  "description": "Mod with menu and fullbright",
+  "authors": ["Knut"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.binds"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
